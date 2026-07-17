@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-//@Listeners(day46.ExtentReportManager.class)
+//@Listeners(day46.ExtentReportManager.class)    -   without using the xml file we can use this annotation and we can execute.
 
 public class OrangeHRM 
 {

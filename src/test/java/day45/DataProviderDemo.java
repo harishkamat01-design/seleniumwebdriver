@@ -14,7 +14,6 @@ public class DataProviderDemo
 {
 	WebDriver driver;
 	
-	
 	@BeforeClass
 	void setup() throws InterruptedException
 	{
@@ -26,7 +25,7 @@ public class DataProviderDemo
 	@Test(dataProvider="dp")
 	void testLogin(String email, String pwd) throws InterruptedException
 	{
-		 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		    driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		    driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys(email); 
 		    driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(pwd); 
 		    driver.findElement(By.xpath("//button[normalize-space()='Login']")).click(); 
@@ -34,15 +33,16 @@ public class DataProviderDemo
 		    Thread.sleep(5000);  
 	}
 	
-	@DataProvider(name = "dp",indices= {0,2})    // THIS IS NOT RANGE, this is index position.
-	Object[][] loginData()
+	@DataProvider(name = "dp",indices= {0,2})    // THIS IS NOT RANGE, this is index position. 
+	Object[][] loginData()               
 	{
-		Object data[][] = { 
+		Object data[][] =                               //2D array  // Object data type can store all kinds data
+			{ 
 				{  "Admin1", "admin1234"  },   //0
 				{  "Admin2", "admin123@"   },   //1
 				{  "Admin", "admin123"   }      //2
-		};
-	return data;	
+		    };
+	return data;	                                    //return the data
 	}
 	
 	@AfterClass

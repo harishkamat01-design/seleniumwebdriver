@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-15T16:14:52 IST" name="Default suite" finished-at="2026-05-15T16:14:53 IST" duration-ms="84">
+  <suite started-at="2026-05-16T13:08:14 IST" name="Suite" finished-at="2026-05-16T13:08:39 IST" duration-ms="24804">
     <groups>
     </groups>
-    <test started-at="2026-05-15T16:14:52 IST" name="Default test" finished-at="2026-05-15T16:14:53 IST" duration-ms="84">
-      <class name="day43.HardVsSoftAssertion">
-        <test-method signature="hardassertion()[pri:0, instance:day43.HardVsSoftAssertion@443118b0]" started-at="2026-05-15T16:14:52 IST" name="hardassertion" finished-at="2026-05-15T16:14:53 IST" duration-ms="27" status="FAIL">
+    <test started-at="2026-05-16T13:08:14 IST" name="Test" finished-at="2026-05-16T13:08:39 IST" duration-ms="24804">
+      <class name="day46.OrangeHRM">
+        <test-method is-config="true" signature="setup()[pri:0, instance:day46.OrangeHRM@4116aac9]" started-at="2026-05-16T13:08:15 IST" name="setup" finished-at="2026-05-16T13:08:39 IST" duration-ms="23995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLogo()[pri:1, instance:day46.OrangeHRM@4116aac9]" started-at="2026-05-16T13:08:39 IST" name="testLogo" finished-at="2026-05-16T13:08:39 IST" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogo -->
+        <test-method signature="testAppURL()[pri:2, instance:day46.OrangeHRM@4116aac9]" started-at="2026-05-16T13:08:39 IST" name="testAppURL" finished-at="2026-05-16T13:08:39 IST" duration-ms="23" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [13] but found [123]]]>
+              <![CDATA[expected [https://opensource-demo.orangehrmlive.com/] but found [https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [13] but found [123]
+              <![CDATA[java.lang.AssertionError: expected [https://opensource-demo.orangehrmlive.com/] but found [https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1431)
-at org.testng.Assert.assertEquals(Assert.java:1395)
-at org.testng.Assert.assertEquals(Assert.java:1441)
-at day43.HardVsSoftAssertion.hardassertion(HardVsSoftAssertion.java:14)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at day46.OrangeHRM.testAppURL(OrangeHRM.java:42)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -53,27 +60,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hardassertion -->
-        <test-method signature="softassertion()[pri:0, instance:day43.HardVsSoftAssertion@443118b0]" started-at="2026-05-15T16:14:53 IST" name="softassertion" finished-at="2026-05-15T16:14:53 IST" duration-ms="3" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- testAppURL -->
+        <test-method signature="testHomePageTitle()[pri:3, instance:day46.OrangeHRM@4116aac9]" started-at="2026-05-16T13:08:39 IST" name="testHomePageTitle" finished-at="2026-05-16T13:08:39 IST" depends-on-methods="day46.OrangeHRM.testAppURL" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[The following asserts failed:
-expected [13] but found [123]]]>
+              <![CDATA[Method day46.OrangeHRM.testHomePageTitle() on instance day46.OrangeHRM@4116aac9 depends on not successfully finished methods 
+[day46.OrangeHRM.testAppURL() on instance day46.OrangeHRM@4116aac9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [13] but found [123]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at day43.HardVsSoftAssertion.softassertion(HardVsSoftAssertion.java:29)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+              <![CDATA[java.lang.Throwable: Method day46.OrangeHRM.testHomePageTitle() on instance day46.OrangeHRM@4116aac9 depends on not successfully finished methods 
+[day46.OrangeHRM.testAppURL() on instance day46.OrangeHRM@4116aac9]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
@@ -94,11 +91,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- softassertion -->
-      </class> <!-- day43.HardVsSoftAssertion -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- testHomePageTitle -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:day46.OrangeHRM@4116aac9]" started-at="2026-05-16T13:08:39 IST" name="closeApp" finished-at="2026-05-16T13:08:39 IST" duration-ms="135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- day46.OrangeHRM -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

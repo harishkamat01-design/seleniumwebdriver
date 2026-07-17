@@ -13,15 +13,15 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentReportManager implements ITestListener
 {
 	public ExtentSparkReporter sparkReporter; //UI of the report
-	public ExtentReports extent;//populate common info on report
-	public ExtentTest test; //creating test case entries in report and update the status of test methods
+	public ExtentReports extent;              //populate common info on report
+	public ExtentTest test;                   //creating test case entries in report and update the status of test methods
 
 	public void onStart(ITestContext context) 
 	{
 		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir")+ "/reports/myReport.html");//specific location of the report in html
 		
 		sparkReporter.config().setDocumentTitle("Automation Report"); //Title of the Report
-		sparkReporter.config().setReportName("Functinal Testing"); //Name of the Report 
+		sparkReporter.config().setReportName("Functional Testing"); //Name of the Report 
 		sparkReporter.config().setTheme(Theme.DARK);
 		
 		extent = new ExtentReports();
