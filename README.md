@@ -65,6 +65,57 @@ seleniumwebdriver/
 - Log4j Core `2.25.3`
 - ExtentReports `5.1.2`
 
+## Curriculum Map
+
+This repository is organized as a hands-on Selenium learning journey. Each day folder builds on the previous one and introduces a new automation concept.
+
+### Day-wise Learning Flow
+
+- Day 21: Browser launch and first test case
+- Day 22: Locators and element identification
+- Day 23: CSS selectors and UI styling-based locators
+- Day 24: XPath locators
+- Day 25: XPath axes and advanced navigation
+- Day 26: Browser and conditional methods
+- Day 27: Implicit, explicit, fluent, and sleep waits
+- Day 28+: Advanced Selenium topics and practice exercises
+- Day 42+: TestNG concepts, annotations, assertions, and grouping
+- Day 45+: Data-driven testing and parameterization
+- Day 46+: End-to-end test automation examples
+
+### Workflow Diagram
+
+```text
+Start
+  ↓
+Set up Java + Maven + Selenium
+  ↓
+Learn browser automation basics
+  ↓
+Practice locators (ID, CSS, XPath)
+  ↓
+Use waits and browser methods
+  ↓
+Apply TestNG annotations and assertions
+  ↓
+Run parameterized and grouped tests
+  ↓
+Generate reports and analyze results
+```
+
+## How to Use This Repo
+
+1. Open the project in Eclipse or any Java IDE.
+2. Make sure Java, Maven, and a browser driver are installed.
+3. Browse the examples under `src/test/java` based on the topic you want to learn.
+4. Run a specific test class from the IDE or execute:
+
+```bash
+mvn test
+```
+
+5. Review generated reports in `reports/` and `test-output/` to inspect execution results.
+
 ## Getting Started
 
 ### Prerequisites
